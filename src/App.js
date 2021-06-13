@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import HomePage from './components/HomePage';
 import Form from './components/Form';
-import Nav from './components/Nav';
+import Header from './components/Header';
 
 const App = () => {
   return (
     <>
-      <Nav />
+      <Header />
       <HomePage />
       <Form />
     </>
