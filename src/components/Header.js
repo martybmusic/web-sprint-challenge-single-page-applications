@@ -4,8 +4,10 @@ import Nav from '../components/Nav'
 const Header = () => {
     return (
         <div>
+            <h2>Lambda Eats</h2>
+            <p>Your favorite food, delivered while coding</p>
             <Nav />
-            <h2>Header</h2>
+            
         </div>
     )
 }
