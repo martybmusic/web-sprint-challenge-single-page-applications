@@ -17,6 +17,8 @@ const Form = () => {
 
     const { name, size, pepperoni, sausage, canadianBacon, greenPepper, dicedTomatoes, roastedGarlic, pineapple, specialText } = foodOrder;
 
+    const [submitOrder, setSubmitOrder] = useState(false);
+
     const changeHandler = event => {
         setFoodOrer({...foodOrder, [event.target.name]: event.target.value});
     }
@@ -24,11 +26,12 @@ const Form = () => {
     const submitHandler = event => {
         event.preventDefault();
         console.log(foodOrder);
+        setSubmitOrder(true);
     }
     return (
         <div>
             <h3>Build Your Own Pizza</h3>
-            <form id='pizza-form' onSubmit={submitHandler}>
+            { !submitOrder && <form id='pizza-form' onSubmit={submitHandler}>
                 <label htmlFor='name'>
                     Name
                     <input type='text' name='name' id='name-input' value={name} onChange={changeHandler} />
@@ -75,13 +78,13 @@ const Form = () => {
                     <hr/>
                     <label htmlFor='specialText'>
                         Special Instructions
-                        <input type='textarea' name='specialText' id='specialText' value='specialText' placeholder='Anything else?' onChange={changeHandler}/>
+                        <input type='textarea' name='specialText' id='specialText' placeholder='Anything else?' value={specialText} onChange={changeHandler}/>
                     </label>
                     <hr/>
                     <button id='button' type='submit'>PLACE ORDER</button>
                 </div>
-            </form>
-            <Response />
+            </form>}
+            {submitOrder && <Response />}
 
         </div>
     )
