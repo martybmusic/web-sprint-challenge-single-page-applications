@@ -21,7 +21,7 @@ const Form = () => {
                         <option value ='large'>Large (14")</option>
                     </select>
                 </label>
-                <p>Add Toppings (pick up to 6)</p>
+                <p>Add Toppings (pick up to 5)</p>
                 <label htmlFor='pepperoni'>
                     <input type='checkbox' name='pepperoni' id='pepperoni' value='pepperoni' onChange={onChangeHandler}/>
                     Pepperoni
@@ -37,6 +37,22 @@ const Form = () => {
                 <label htmlFor='green-pepper'>
                     <input type='checkbox' name='green-pepper' id='green-pepper' value='green-pepper' onChange={onChangeHandler}/>
                     Green Pepper
+                </label>
+                <label htmlFor='diced-tomatoes'>
+                    <input type='checkbox' name='diced-tomatoes' id='diced-tomatoes' value='diced-tomatoes' onChange={onChangeHandler}/>
+                    Diced Tomatoes
+                </label>
+                <label htmlFor='roasted-garlic'>
+                    <input type='checkbox' name='roasted-garlic' id='roasted-garlic' value='roasted-garlic' onChange={onChangeHandler}/>
+                    Roasted Garlic
+                </label>
+                <label htmlFor='pineapple'>
+                    <input type='checkbox' name='pineapple' id='pineapple' value='pineapple' onChange={onChangeHandler}/>
+                    Pineapple
+                </label>
+                <label htmlFor='special-text'>
+                    Special Instructions
+                    <input type='textarea' name='special-text' if='special-text' placeholder="Anything else you'd like to add?" onChange={onChangeHandler}/>
                 </label>
             </form>
 
