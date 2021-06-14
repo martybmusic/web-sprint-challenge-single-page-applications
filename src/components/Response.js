@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Response = () => {
+const Response = props => {
+const { foodOrder } = props;
     return (
         <div>
-            <h3>Your Pizza delivery is being prepared - thank you!</h3>
+            <h3>Thank you{foodOrder.name}, your Pizza delivery is being prepared!</h3>
         </div>
     )
 }
